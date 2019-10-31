@@ -1,0 +1,75 @@
+body {
+	padding: 3em;
+	font-size: 1.2em;
+}
+
+/* Demonstrera hur ändring av bakgrundsfärg ser ut med olika hastigheter */
+.highlight {
+	background-color: #f7f8e0;
+	padding: 2em;
+	transition: background-color 2.5s;
+}
+.highlight:hover {
+	background-color: #f3e2a9;
+}
+.highlight-fast {
+	transition: background-color 0.8s;
+}
+
+/* Ett element som är nästan helt genomskinligt -fade in */
+.fade-in {
+	opacity: 0.2;
+	transition: opacity 0.5s;
+	background-color: red;
+}
+.fade-in:hover {
+	opacity: 1.0;
+}
+
+/* Element som åker iväg åt höger. Se upp med "position". */
+.slide-right {
+	transition: left 2s;
+	position: relative;
+	left: 0em;
+	width: 10em;
+	background-color: pink;
+	height: 1.6em;
+}
+.slide-right:hover {
+	left: 20em;
+}
+
+/* Alla transformationer kan animeras */
+.rotate {
+	background-color: lime;
+	width: 10em;
+	height: 3em;
+	transition: transform 1s;
+}
+.rotate:hover {
+	transform: rotate(-1turn);
+}
+
+/* Ett button-element som skakar till när vi hovrar med musen över det. */
+button {
+	padding: 0.5em;
+	font-size: 1.2em;
+
+}
+.shake:hover {
+	animation: shake 0.2s;
+}
+@keyframes shake {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-20deg);
+	}
+	50% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
